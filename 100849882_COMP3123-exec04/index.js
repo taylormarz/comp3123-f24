@@ -19,7 +19,7 @@ app.get('/user', (req, res) => {
     const fname = req.query.fname;
     const lname = req.query.lname;
 
-    res.send(`First Name: ${fname}, Last Name: ${lname}`);
+    res.send({"firstname": fname, "lastname": lname});
 });
 
 // post request to /user endpoint with path parameters for first/last name
@@ -30,7 +30,7 @@ app.post('/user/:fname/:lname', (req, res) => {
     const fname = req.params.fname;
     const lname = req.params.lname;
 
-    res.send(`First Name: ${fname}, Last Name: ${lname}`);
+    res.send({"firstname": fname, "lastname": lname});
 });
 
 // listening on port 3000
